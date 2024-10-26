@@ -13,6 +13,7 @@ app.use('/css', express.static('CSS')); // Serve CSS
 
 
 app.use(bodyParser.json()); // Middleware to parse JSON requests
+app.use(bodyParser.urlencoded({ extended: true })); // Middleware to parse form data
 
 // Custom middleware to log request method and URL
 app.use((req, res, next) => {
@@ -219,7 +220,7 @@ app.get('/users-view', (req, res) => {
 });
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////IMG/////////////////////////////////////////////////////////////
 
 app.use(express.static('public')); // Serve images
 
