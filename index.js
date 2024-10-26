@@ -210,6 +210,10 @@ app.get('/comments', (req, res) => {
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
 
+//route for rendering ejs page
+app.get('/', (req, res) => {
+  res.render('index'); // Render the 'index.ejs' 
+});
 
 
 
