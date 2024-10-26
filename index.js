@@ -224,3 +224,18 @@ app.get('/users-view', (req, res) => {
 
 app.use(express.static('public')); // Serve images
 
+
+
+
+//-----------------------------------Regular Expressions within Route Paths-----------------------------------------
+
+// Route to find users by name using a regular expression in the path
+app.get('/users/:name([a-zA-Z]+)', (req, res) => {
+  const name = req.params.name; // Get the name from the URL parameter
+  const matchedUsers = users.filter(user => user.name.toLowerCase() === name.toLowerCase()); // Filter users by name
+  if (matchedUsers.length) {
+    res.json(matchedUsers); // Send matched users
+  } else {
+    res.status(404).send('User not found'); // Send a 404 error response if no user is found
+  }
+});
