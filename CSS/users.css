@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Используем min-height, чтобы страница всегда занимала весь экран */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 700px; /* Увеличим ширину для лучшего отображения списка */
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* Уменьшили отступ перед изображением */
+  }
+  
+  .list_of_users {
+    padding: 10px; /* Уменьшили внутренний отступ */
+    border-radius: 10px;
+    margin-bottom: 5px; /* Уменьшили отступ между пользователями */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em; /* Уменьшили размер шрифта */
+  }
+  
+  .list_of_users span {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  
+  .image-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .image-container img {
+    max-width: 80%; /* Уменьшим ширину для аккуратного отображения */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  

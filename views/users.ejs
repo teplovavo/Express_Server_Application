@@ -2,14 +2,23 @@
 <html>
 <head>
   <title>Users List</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/users.css">
 </head>
 <body>
-  <h1>Users</h1>
-  <ul>
-    <% users.forEach(user => { %>
-      <li><%= user.name %> - <%= user.email %></li>
-    <% }) %>
-  </ul>
+  <div class="main-container">
+    <h1>Registered Users:</h1>
+    <ul>
+      <% users.forEach(user => { %>
+        <li class="list_of_users">
+          <span><%= user.name %></span>
+          <span><%= user.email %></span>
+        </li>
+      <% }) %>
+    </ul>
+
+    <div class="image-container">
+      <img src="/images/conference_img.webp" alt="Conference Image">
+    </div>
+  </div>
 </body>
 </html>

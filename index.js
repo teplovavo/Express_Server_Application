@@ -55,7 +55,7 @@ app.post('/users', (req, res) => {
   const newUser = req.body;
   newUser.id = users.length + 1; // Simple id generation
   users.push(newUser); // Add new user to the array
-  res.status(201).json(newUser); // Send back the new user
+  res.redirect('/users-view'); // Redirect to the users list view
 });
 
 // POST a new post
@@ -218,4 +218,8 @@ app.get('/users-view', (req, res) => {
   res.render('users', { users }); // Pass users data to the template
 });
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+app.use(express.static('public')); // Serve images
 
