@@ -9,6 +9,9 @@ import comments from './data/comments.js';
 const app = express(); // Create an instance of the express module
 const PORT = 3001; // Set the port number
 
+app.use('/css', express.static('CSS')); // Serve CSS
+
+
 app.use(bodyParser.json()); // Middleware to parse JSON requests
 
 // Custom middleware to log request method and URL
