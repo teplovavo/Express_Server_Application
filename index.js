@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   console.log('[TEST]');  // Log a message
-  res.send('Hello from homepage!'); // Send a response to the client
+  res.render('index'); // Render the index.ejs 
 });
 
 //--------------------GET Routes for all data categories--------------------------------------------------
@@ -211,9 +211,8 @@ app.get('/comments', (req, res) => {
 app.set('view engine', 'ejs');
 
 //route for rendering ejs page
-app.get('/', (req, res) => {
-  res.render('index'); // Render the 'index.ejs' 
+app.get('/users-view', (req, res) => {
+  res.render('users', { users }); // Pass users data to the template
 });
-
 
 
